@@ -1,38 +1,24 @@
 package com.example.rockpaperscissors
 
-fun main(){
+fun main() {
 
-    var computerChoice = ""
-    var playerChoice = ""
+    println("Enter 1st Number : ")
+    val num1s = readln()
+    val num1I = num1s.toInt()
 
-    println("Rock, Paper or Scissors? Enter your choice")
-    playerChoice = readln()
+    println("Enter 2nd Number : ")
+    val num2s = readln()
+    val num2I = num2s.toInt()
 
-    var randomNumber = (1..<3).random()
-        if(randomNumber == 1){
-            computerChoice = "Rock"
-        } else if(randomNumber == 2){
-        computerChoice = "Paper"
-    } else if(randomNumber == 3){
-        computerChoice = "Scissors"
-    }
-println(computerChoice)
-
-    var winner = when {
-        computerChoice == playerChoice -> "Tie"
-        playerChoice == "Rock" && computerChoice == "Scissors " -> "Player"
-        playerChoice == "Paper" && computerChoice == " Rock" -> "Player"
-        playerChoice == "Scissors" && computerChoice == "Paper" -> "Player"
-        else -> "Computer"
-
-    }
-
-    if(winner=="Tie"){
-        println("Its Tie")
-    }else if(winner == "player"){
-        println("player won")
-    }else{
-        println("player won")
-    }
-
+    val result = divide(5, 2)
+    println("The result is $result" )
 }
+
+    fun divide( num1 : Int, num2 : Int ) : Int{
+        val result = num1/num2
+        return result
+    }
+
+
+
+
